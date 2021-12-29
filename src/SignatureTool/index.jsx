@@ -25,6 +25,7 @@ const SignatureTool = () => {
     WebViewer(
       {
         path: '/webviewer/lib',
+        css: 'assets/style.css',
         fullAPI: true,
         disabledElements: [
           // 'header',
@@ -55,7 +56,9 @@ const SignatureTool = () => {
       viewer.current
     ).then(async (instance) => {
       const { PDFNet, documentViewer, Tools, Annotations } = instance.Core;
-      
+
+      instance.UI.setSignatureFonts(['Tangerine', 'Arizonia']);
+
       instance.UI.setToolbarGroup('toolbarGroup-Insert');
       
       const tool = documentViewer.getTool(Tools.ToolNames.SIGNATURE);  
