@@ -1,0 +1,13 @@
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.webviewer1 {
+  width: 641px;
+  height: 335px;
+  /* width: auto; */
+  /* height: 500px; */
+}
