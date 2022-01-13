@@ -3,16 +3,6 @@ import WebViewer from '@pdftron/webviewer';
 import Spinner from './Spinner'
 import './style.css';
 
-const Slider = () => {
-  return (
-    <input
-      type="range"
-      onInput={() => { /* Do something */ }}
-    >
-    </input>
-  );
-}
-
 const SignatureTool = () => {
   const viewer = useRef(null);
   const [instance, setInstance] = useState(null);
@@ -59,8 +49,8 @@ const SignatureTool = () => {
       instance.UI.setToolbarGroup('toolbarGroup-Insert');
       
       const tool = documentViewer.getTool(Tools.ToolNames.SIGNATURE);  
-      tool.addEventListener('annotationAdded', (annotation) => {
-        console.log('Add Signature')
+      tool.addEventListener('signatureSaved', (annotation) => {
+        console.log(annotation);
       });
       
       documentViewer.addEventListener('finishedRendering', () => {
