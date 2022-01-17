@@ -1,0 +1,18 @@
+.button {
+  order: none;
+  font-family: Lato,sans-serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background: #3183c8;
+  border-radius: 4px;
+  padding: 0 8px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #f8f9fa;
+  font-weight: 700;
+  cursor: pointer;
+}

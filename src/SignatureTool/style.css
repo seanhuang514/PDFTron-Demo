@@ -8,6 +8,5 @@
 .webviewer1 {
   width: 641px;
   height: 335px;
-  /* width: auto; */
-  /* height: 500px; */
+  position: relative;
 }
